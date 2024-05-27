@@ -19,7 +19,7 @@ def open_files(filename):
 	syscall_map = parse_syscall_mapping('syscallent.h')
 
 	# Load the JSON file containing syscall numbers
-	with open('diff.json', 'r') as file:
+	with open(filename, 'r') as file:
 	    syscall_numbers = json.load(file)
 
 	# Convert syscall numbers to names
@@ -29,7 +29,7 @@ def open_files(filename):
 	print(syscall_names)
 
 	# Save to a new JSON file called parsed_filename where filename is the provided parameter
-	with open(f'parsed_{res_filename}', 'w') as file:
+	with open(f'parsed_{filename}', 'w') as file:
 	    json.dump(syscall_names, file, indent=4)
 	    
 if __name__ == "__main__":
