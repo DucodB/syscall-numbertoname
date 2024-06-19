@@ -10,7 +10,7 @@ To use Syscall Number to Name, follow these steps:
    python3 parse_syscall_numbers.py <input_file>
    ```
    - `<input_file>`: Name of the JSON file containg syscall numbers.
-4. **View Results**: The parsed content will be printed in the console and written to the file named parsed_<input_file>
+4. **View Results**: The parsed content will be printed in the console and written to the file named `parsed_<input_file>`.
 
 
 ## Example
