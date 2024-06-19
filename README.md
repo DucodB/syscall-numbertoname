@@ -1,15 +1,16 @@
-# syscall-number-to-name
+# Syscall Number to Name
 
-## Description
-This Python script is designed to parse syscall numbers from the C header file `syscallent.h` (https://gitlab.com/strace/strace/-/blob/master/src/linux/x86_64/syscallent.h) and then map them to their corresponding syscall names. It takes a JSON file containing syscall numbers as input, converts those numbers to syscall names using the mapping extracted from `syscallent.h`, and prints the resulting list of syscall names. Additionally, it saves the list of syscall names to a new JSON file with a name combining the prefix 'parsed_' and the name of the input file provided as a parameter.
+This Python script is designed to convert a JSON file containing syscall numbers to a JSON file containing syscall names. It achieves this by parsing the list of syscalls from the C header file `syscallent.h` (https://gitlab.com/strace/strace/-/blob/master/src/linux/x86_64/syscallent.h) to create a mapping from syscall numbers to names.
 
 ## Usage
-1. Ensure you have Python installed on your system.
-2. Run the script using the following command:
+To use Syscall Number to Name, follow these steps:
+1. **Install Python:** Ensure you have Python installed on your system.
+2. **Run the Program:** Run the script using the following command:
    ```
-   python3 parse_syscall_numbers.py filename
+   python3 parse_syscall_numbers.py <input_file>
    ```
-   Replace `filename` with the name of the input file containing syscall numbers.
+   - `<input_file>`: Name of the JSON file containg syscall numbers.
+4. **View Results**: The parsed content will be printed in the console and written to the file named parsed_<input_file>
 
 
 ## Example
@@ -21,4 +22,3 @@ This will print the list of syscall names and save them to a file named `parsed_
 
 ## Note
 - Ensure that `syscallent.h` is in the same directory as the script. It can be found on the github provided.
-- Make sure to provide the correct file name as a parameter when executing the script.
